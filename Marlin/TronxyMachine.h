@@ -20,8 +20,8 @@
 #define UI_MARLIN_DEFAULT  0
 #define UI_PIC480X320      1
 
-#define TRONXY_PROJ        PROJ_XY3SE
-#define TRONXY_UI          UI_PIC480X320 // UI_PIC480X320 or UI_MARLIN_DEFAULT
+#define TRONXY_PROJ        PROJ_X5SA400_PRO
+#define TRONXY_UI          UI_MARLIN_DEFAULT // UI_PIC480X320 or UI_MARLIN_DEFAULT
 
 #if TRONXY_UI > 0
 #define HAS_TRONXY_UI      1
@@ -195,8 +195,8 @@
 
 #elif TRONXY_PROJ == PROJ_X5SA400_PRO
 
-#define TRONXY_MACHINE_NAME       "X5SA400"
-// #define TRONXY_MACHINE_NAME       "X5SA400-PRO"
+// #define TRONXY_MACHINE_NAME       "X5SA400"
+#define TRONXY_MACHINE_NAME       "X5SA400-PRO"
 #define TRONXY_BACKUP_POWER       0 //UPS功能,注意需要某些特定脚作断电检测,配置相应的中断函数
 #define TRONXY_SCREEN_SHUTDOWN    1 //熄屏功能
 #define TRONXY_HOME_XY_ONLY       0 //手动调试界面复位是否只有XY复位,如果是,则Z复位按钮激活,否则失效
@@ -206,8 +206,8 @@
 #define DUAL_ZMAX_HOME            0 //大端复位,向反方向复位,再回到正方向找0点
 #define Z_BED_MOVE                1 //Z轴移动:热床
 #define EXTRUDERS                 1 //挤出机数量
-#define INVERT_E0_DIR             true //TITAN:true
-#define USE_EXTRUDER              1 //TITAN:1,BMG:2,TAOLI:3,general:4
+#define INVERT_E0_DIR             false //TITAN:true
+#define USE_EXTRUDER              2 //TITAN:1,BMG:2,TAOLI:3,general:4
 #define FIX_MOUNTED_PROBE
 
 #elif TRONXY_PROJ == PROJ_X5SA400_2E
